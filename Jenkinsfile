@@ -15,16 +15,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('Print Paths') {
-    steps {
-        sh '''
-            echo "Current workspace directory:"
-            pwd
-            echo "List target directory contents:"
-            ls -lh target
-        '''
-    }
-}
 
      stage('Archive') {
             steps {
